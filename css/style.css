@@ -1,0 +1,167 @@
+body {
+    margin: 0px auto;
+    background-color:#222;
+    color: #FFF;
+    font-size: 20pt;
+    overflow: hidden;    
+}
+.body-overflow-hidden {	
+}
+#calculator-wrapper {
+	height: 320px;
+	width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: #343434;
+}
+#screen-wrapper {	
+}
+#history-wrapper {	
+}
+.btn-clear-history {
+	background-color: #000000;
+	box-shadow: 0px 0px 1px #000000 inset;	
+	font-size: 16pt;
+	text-align: center;
+	margin-left: 40px;
+	padding: 5px;
+	position: absolute;
+	bottom: 40px;
+	width: 230px;
+	transition: opacity .25s ease-in-out;
+	opacity: 1;
+}
+.cal-row {
+	float: left;
+	height: 40px;
+}
+.cal-screen {
+	background: #343434;
+	height: 100px;	
+	text-align: right;
+	display: table;
+	font-size: 30pt;
+	transition: height 0.5s;
+}
+.cal-screen-expanded {
+	height: 300px;
+}
+#result {
+	display: table-cell;	
+	width: 320px;
+	vertical-align: middle;
+	padding-right: 10px;
+	overflow-x: hidden;
+}
+#history-wrapper {
+	width: 320px;
+	height: 0px;		
+	margin-top: 0px;
+	transition: height 0.5s;
+}
+.history-expand {
+	height: 300px;
+}
+#history {
+	height: 240px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin-top: 10px;
+	margin-right: 10px;	
+	position: relative;
+}
+.history-result {
+	color: #38e900;
+	margin-top: -40px;
+}
+.keyboard {
+	height: 200px;
+	transition: height 0.5s;
+}
+.cal-keyboard-toggle {
+	float: left;
+	width: 320px;
+	height: 20px;
+	background-color: #000000;
+	background-image: url('../images/ic_btn_show_history.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.cal-keyboard-collapsed {
+	height: 0px;
+}
+.cal-keyboard-hidden {
+	display: none;
+}
+.cal-button {
+	float: left;
+	background-color: #000000;
+	display: table;
+	text-align: center;	
+	width: 80px; 
+	height: 40px;
+	box-shadow: 0px 0px 1px #000 inset;
+}
+.cal-button:active {
+	background-color: #000000;
+}
+.cal-button span {
+	display: table-cell;
+	vertical-align: middle;
+}
+.cal-button-showresult {
+	background-color: #000000;
+}
+.cal-button-operator {
+	background-color: #000000
+}
+.cal-button-clear {
+	background-color: #000000;
+}
+.cal-button-back {
+	background-color: #000000;
+	height: 40px;
+	width: 80px;
+	background-image: url('../images/ic_back.png');
+}
+.deleteHistory {
+	animation-name: swipeLeftToDeleteHistory;
+	animation-duration: 1s;
+	-webkit-animation-name: swipeLeftToDeleteHistory;
+	-webkit-animation-duration: 1s;		
+}
+.restoreHistory {	
+	animation-name: swipeRightToRestoreHistory;
+	animation-duration: 1s;
+	-webkit-animation-name: swipeRightToRestoreHistory;
+	-webkit-animation-duration: 1s;
+}
+@-webkit-keyframes swipeLeftToDeleteHistory {	
+	from {
+		left: 0px; top: 0px; opacity: 1;
+	} to {
+		left: 360px; top: 0px; opacity: 0;
+	}	
+}
+@keyframes swipeLeftToDeleteHistory {	
+	from {
+		left: 0px; top: 0px; opacity: 1;
+	} to {
+		left: 360px; top: 0px; opacity: 0;
+	}	
+}
+@-webkit-keyframes swipeRightToRestoreHistory {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+@keyframes swipeRightToRestoreHistory {
+	from {	
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
